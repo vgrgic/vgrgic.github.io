@@ -1,0 +1,52 @@
+---
+layout: post
+title: Difference between Enterprise and Software Architecture is artificial
+date: 2013-12-18 16:21:15.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags:
+- agile
+- architecture
+- enterprise architecture
+- software architecture
+meta:
+  _edit_last: '6260502'
+  _wpas_skip_5350022: '1'
+  _wpas_skip_5350032: '1'
+  _wpas_skip_5350037: '1'
+  _wpas_skip_5350035: '1'
+  _oembed_69e25ef433f86beca4bcec69400509df: "{{unknown}}"
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>Every single Enterprise Architect I know is or use to be an IT guy. Most of them are saying they are responsible for creating or adjusting processes, policies, flow of information, resource management and technology of their organisation. In reality, almost all of them are busy with technology, and maybe information part. At best, they are making nice pictures of business processes and information. There are certainly people responsible for execution of business strategy, but somehow they don't call themselves Enterprise Architects. These people are often C-level managers or work for a policy department. "Enterprise Architects" might give advises to these people, but they are never part of the club. At least not in any organisation I've seen.</p>
+<p style="text-align:center;"><img class="size-full wp-image aligncenter" id="i-381" alt="Image" src="http://vgrgic.files.wordpress.com/2013/12/enterprise-vs-software.png?w=487" width="487" height="207" /></p>
+<p>No matter how much we discuss term Enterprise Architecture - and there are really many of them, in reality it is always about making decisions about some combination of IT systems within one organisation seen from different perspectives (workplaces, software, infrastructure, integration, middleware, hardware, and so on). Enterprise Architects are very much concerned with processes, information flowing between departments and people, policies, strategy, but these are mere inputs for making IT decisions. At best, certain IT limitations or capabilities can influence business decisions in making or adjusting business processes.</p>
+<p>Therefore, difference between Enterprise and Software is just a matter of scale and limited number of different aspects. The rest should be treated the same way. Btw, term software architecture in this context can be replaced with solution or system architecture. This distinction is also just as much relevant.</p>
+<p>Let me explain. The first question would be: Which input is not relevant in creating either of them?</p>
+<ul>
+<li>Business processes<br />
+When creating a specific solution it is very much important that processes in specific software solution represent and are aligned with one or more business processes.</li>
+<li>Strategy and Business Vision<br />
+One of the first things an Agile team does is get together with business people and define a Production Vision Board. One of the typical inputs here is a story from people responsible for strategy to explain the ultimate business goal.</li>
+<li>Information<br />
+Domain-Driven Design is one of the most important practices in designing software solutions. The most important message of DDD is ubiquitous language. It means that terminology in code should be same as terminology used by business / users. In other words, developers are required to understand information on enterprise level, but only scaled down to their specific domain. Wether one defines Canonical Data Model, master data, reference data, or whatever terminology used, none of these are lacking in one software solution. Only terminology might be different. The difference is again only scale, and speed of change. Knowledge and practices in defining and partitioning information across different systems are same when defining one system.</li>
+</ul>
+<p>Another question is wether concerns and practices are so different:</p>
+<ul>
+<li>Workplace, hardware, infrastructure, network<br />
+Any of these aspects are very much important when delivering a solution for obvious reasons. There are software / solution architects or teams only concerned with code, but that is just simply irresponsible in Agile environments.</li>
+<li>Design practices<br />
+A nice example here are SOLID principles. I wish anyone who call himself Enterprise Architect could learn these principles. Especially when creating services in SOA. Our enterprise landscapes would become "clean enterprise landscapes", just like we practice <a href="http://blog.goyello.com/2013/01/21/top-9-principles-clean-code/" target="_blank">clean code</a>.</li>
+<li>Quality requirements<br />
+The same as for one system, the direction in enterprise landscape being formed is based on required quality requirements like security, capacity, availability, and so on. These might be different for different systems, but same rules apply to a single system. Some parts of one solution are allowed to be less available.</li>
+</ul>
+<p>I could go on with many more examples, but I invite you to challenge me in this statement first. What makes Enterprise Architecting so special? Of course, you will need to agree on my definition of Enterprise Architecture first. :-)</p>

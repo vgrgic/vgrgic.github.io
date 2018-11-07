@@ -1,0 +1,49 @@
+---
+layout: post
+title: Scaling Agile Architecting is NOT rocket science
+date: 2013-01-05 21:26:00.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  blogger_blog: blog.leanarch.eu
+  blogger_author: Viktor Grgic
+  blogger_972bc0b559603e4cbf70df50f817aae3_permalink: '8155189471725799142'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>What about Enterprise Architecture? Can it also be Agile and how does Agile mindset affects Enterprise Architecture? The book <a href="http://deanleffingwell.com/book-scaling-software-agility/" target="_blank">"Scaling Software Agility" from Dean Leffingwell</a> elaborates on Agile scaling challenges in general. One of the aspects is architecture.</p>
+<p>My general opinion about this book is that most of the book is basic Agile knowledge, but it does have a few practices related to Agile Architecting on which I'd like to elaborate:</p>
+<div class="separator" style="clear:both;text-align:center;"><a href="http://vgrgic.files.wordpress.com/2013/01/1e741-kids.png" style="margin-left:1em;margin-right:1em;"><img border="0" height="236" src="http://vgrgic.files.wordpress.com/2013/01/1e741-kids.png?w=300" width="400" /></a></div>
+<h2>Component based Agile teams</h2>
+<div>The idea is to organize multiple teams in accordance to architecture. Each component is very much loosely coupled with other components which makes life easier for a team and they don't depend too much on progress of other teams.</div>
+<div>IMO, this can work most of the times, with one limit that needs to be considered: Do not assume too fast that multiple teams cannot take care of same multiple components&nbsp;simultaneously. Although more difficult to manage, the great advantages is quality improvement when more people are working with the same code and improved interchangeability of team members because so many of them know the code.</p>
+</div>
+<div></div>
+<h2>Architectural Runway</h2>
+<div>Before teams pick up their stories, basic overall architectural decisions are made. These are necessary for correct definition of each component built by separate teams. I like this, except the fact that you should have separate (runway) teams named "Architecture" or "Prototyping team" consisting of architects and/or technical leaders from other teams which don't deliver direct value.</div>
+<div>Although Leffingwell mentions that such teams deliver coded architecture and not some document, there are still two major pitfalls:</div>
+<div>
+<ol>
+<li>Functional teams are not familiar and involved in this early development and tend to dislike delivered product because they often do not support to be delivered stories well.</li>
+<li>Architecture and prototyping teams tend to be technology-driven and the question: "Is this really needed?" is not easily answered. Keeping things as simple as possible is not natural in such teams.</li>
+</ol>
+<div>I find it much better to have same functional teams who deliver direct value also collaborate and make these decisions themselves. Also, term: "architectural runway" sounds like something special, while in practice it is just team members from different teams getting together and making decisions.</div>
+</div>
+<div></div>
+<h2>Design spikes</h2>
+<div>According to Leffingwell, these are activities intended to address design challenges, architectural extensions, and the impact of new technologies or to explore critical problems with the existing solution. Design spikes do not deliver direct value and occur in each iteration.</div>
+<div>What I wonder about design spikes is what makes something worth spending time on regular basis discussing, discovering and improving by itself? What kind of design issue is not driven by one or more stories or business requirements and thus not prioritized in product backlog? In other words, I think it is really good to spend time discussing and designing, but always driven by real business / user need. Therefore, it is not needed to plan such meetings on regular basis; let them happen as part of user stories design.</div>
+<div></div>
+<h2>Conclusion</h2>
+<div>In large enterprise Agile projects and organisations I have worked with, we never needed architectural runway or something similar. In contrary, such undertakings were standing in the way of delivering real architecture and quality.</div>
+<div>What we did need is more intensified collaboration between teams and business during delivery of real value. This means, many on-demand cross-functional teams workshops and meetings. This requires creativity in order to make them as effective as possible.</div>

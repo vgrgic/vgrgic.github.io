@@ -1,0 +1,37 @@
+---
+layout: post
+title: Design for Change as an Agile Architecture principle
+date: 2012-07-02 07:12:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  blogger_blog: blog.leanarch.eu
+  blogger_author: Viktor Grgic
+  blogger_972bc0b559603e4cbf70df50f817aae3_permalink: '8299926700907508032'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>The best definition of a legacy system: The system that works in production. Unfortunately, I can't remember from whom I heard this definition.</p>
+<p>Your customer or employer runs his company with legacy systems. The technology in use might be very old, but it does deliver business value. That can't be said for a system that you might be designing right now. The chances are that, if you are lucky as an architect, your system will shortly after hits the production be marked as legacy or ready for replacement soon. If you are even more lucky, the system will be extended and somewhat adjusted for few years to come.</p>
+<p> Eventually, the inevitable will happen. IT management decides that operational costs are too high, time-to-market for changes is too long, technology is not supported any more and so on. It seems that nowdays with all the technology changes this problem is only worsened.</p>
+<p>But, is it really inevitable that so many large systems are replaced completely?</p>
+<p>One of the main causes is <b>tendency to prevent this problem in first place</b>. The main words used by architects are flexibility and generic solutions. <i>If our system is flexible and generic enough, then we can handle our future requirements. </i>The result is usually wishful thinking and just more complex solutions. Complex IT systems are always sooner outdated than simple ones. It is nowdays more and more difficult to predict the future, considering the pace in which business people change their mind.</p>
+<p>It is much safer and cheaper to build system which will NOT last very long as it is designed. More precise: <b>defined architecture will not last for long</b>. If you build a system that is <b>designed to be changed</b>, than you are NOT building generic components, but only making sure that specific solution is cheap in case of partial replacement. This goes hand in hand with Scrum where you are always making sure that you are able to embrace the change, no matter how extreme this change might be.</p>
+<p>Principles in achieving this:
+<ol>
+<li>The simplest possible solution is cheapest one to replace.</li>
+<li>When introducing new system part or technology, you should find out how much it will cost to replace it.</li>
+<li>Prevent depending on underlaying technology as much as possible.</li>
+<li>Make sure services / interfaces are based on well defined loosely coupled functions your user and business understands. Do not make generic SOAP interface or some other technical standard interface. Replacing one technical standard with another is much cheaper than changing functionally highly coupled systems.</li>
+</ol>
+<div>My belief and experience is that when equiped with these principles, your system will have a bigger chance of evolving instead of being replaced completely.</div>

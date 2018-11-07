@@ -1,0 +1,35 @@
+---
+layout: post
+title: DCI paradigm and why does it make sense to me
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: draft
+categories:
+- agile architecture
+- psychology
+- software architecture
+tags: []
+meta:
+  _edit_last: '6260502'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p style="text-align:right;"><em>If machines just could work similar to how human minds work, that would be great!</em></p>
+<p>I remember my first mental images of what object-oriented programming is. I would compare it to a car, in order to understand inheritance, encapsulation, classes, objects, and so on. I was impressed by similarities with real world, and how possibilities seemed so limitless.</p>
+<p>Unfortunately, things didn't turn out to be as imagined. Object-orientation has definitely helped me write well-structured code. But, the similarity with normal peoples' mental model was not really there. The only recognisable parts would be those few entity classes representing the basic static structure. And even this 1% of the system is all about classes, and not really objects. In case you haven't noticed: in object-oriented programming we don't really code objects, but classes. Objects are these usually very short-lived things created when user clicks a button on a web page. The main perspective of normal people is an object or an instance of a class; a specific car is much more interesting than moulds for making car parts. So, if we exclude these super-human developers, nobody else has a sensible representation of how object-oriented software actually works. Even developers rarely conceptualise objects in their head, but classes. This is recognisable when teaching object-orientation to junior developers in difficulty to understand difference between instance and class variables, and overuse of omnipresent god-like objects called singletons.</p>
+<p>At the same time, normal humans' perception of computer systems is almost completely defined by its user interface. Instead of creating software which resemble human mental model, people have adapted themselves to primitive model of series of inputs and outputs. However complex and open computer software might look like, it is always a sequence of a human initiated action with this black box, and waiting for a certain response, completely oblivious to fact that this is an object-oriented software system. We can even conclude that despite the enormous computer power we have today, we have incredibly limited perception of possible interactions between humans and machines.</p>
+<p>Procedural programming is therefore a more natural way of programming for this adapted and limited way of thinking about computers and software. A mortal human interacting with software usually has an image of sequential list of commands where input is validated, stored, result retrieved and placed back on the screen. This also explains the popularity of Visual Basic. It fitted this oversimplified model of how complex software systems work. Of course, it often ended up in a big mess.</p>
+<p>Ironically, in order to solve the problem of fundamental disconnection between how people interact with object-oriented software and the originally intended human mental model inside this software, Model-View-Controller pattern is invented by Trygve Reenskaug. We might even say that MVC is the actual interface between humans and our so called object-oriented software.</p>
+<p>A better term for object-oriented software would be class-oriented software. The original idea behind real object-oriented programming as pioneered by Alan Kay, started to take off with Smalltalk, but died out eventually. <a href="https://www.youtube.com/watch?v=r36NNGzNvjo" target="_blank">Dynabook</a> concept, created in 1968, was this amazing example what could have happened if his ideas of interaction with computer would take off. Although resemblance with iPad is incredible, it is something quite different.</p>
+<p>Considering problems introduced with object-oriented programming, as mentioned above, we might be better off if we never tried to apply it in world of business software. After all, the Alan's intention was to create educational software for children, not business software. Nevertheless, object-orientation principles help us today create and manage complex software structures, which is good.</p>
+<p>Today, effect of misalignment between human mental model about software systems and actual object-oriented software is a difficult to follow execution path. As James Coplien says, <strong>what system does</strong>, or its behaviour in specific context, when users clicks a button, is scattered all over many different classes. MVC did solve connection with the user, but recognising behaviour in code is still just as difficult. Any experienced OO developer knows how difficult it is to know what system does just by reading the code.</p>
+<p>This is where DCI (Data, Context, Interaction) brings improvement. With DCI, an object-oriented software system consists of two parts. One describes what the system does, and other what the system is. This brings software design much closer to humans' mental model. Like in real world, we have a mug - what the system is. User may wish to use this mug to drink coffee - what the system does. In this specific context with introduction of hot coffee, mug plays a specific role named coffee mug. The same or other user might use mug to drink soda instead of coffee. It will therefore receive a different role at different moment. The method called "drink()" is probably part of mug (what the system is), because it is same in any context and it can be considered as stable local method tightly bound to mug. The method called "sipping()" is possibly part of the context coffee mug.</p>
+<p>Data part in DCI is the part called "what the system is". IMO, equating "what the system is" with data is rather limiting perspective. A danger of this is creation of transaction script style software where design is oversimplified. The correct balans between "IS" and "DOES" part is important.</p>
+<p>I won't explain how this exactly works in different languages, because there are many great articles about it already. If you want to know more</p>

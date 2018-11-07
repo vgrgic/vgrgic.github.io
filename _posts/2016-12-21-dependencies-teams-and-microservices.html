@@ -1,0 +1,91 @@
+---
+layout: post
+title: Dependencies, teams and microservices
+date: 2016-12-21 16:40:46.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- agile
+- agile architecture
+- LeSS framework
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  publicize_google_plus_url: https://plus.google.com/+ViktorGrgic/posts/HuT13mLjf7C
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '30220238241'
+  _publicize_done_5391172: '1'
+  _wpas_done_5350032: '1'
+  _publicize_failed_5391176: O:13:"Keyring_Error":2:{s:6:"errors";a:1:{s:21:"keyring-request-error";a:1:{i:0;a:6:{s:7:"headers";O:42:"Requests_Utility_CaseInsensitiveDictionary":1:{s:7:"
+  _publicize_done_external: a:2:{s:7:"twitter";a:1:{i:5350037;s:52:"https://twitter.com/vgrgic/status/811491627478974465";}s:8:"facebook";a:1:{i:5350022;s:38:"https://facebook.com/10211385308525274";}}
+  _publicize_done_5391179: '1'
+  _wpas_done_5350037: '1'
+  publicize_twitter_user: vgrgic
+  _publicize_done_5391162: '1'
+  _wpas_done_5350022: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>The Candidate LeSS trainers mailing list is a place where passionate people have interesting discussions. This post is a result of one of those discussions.</p>
+<p>An assumption in agile community is that scaling agile is mainly about <em>managing and reducing dependencies; </em>either between teams or with others outside of a product group. This is used as a reason to introduce additional structures and roles, such as architecture owner, program / project manager, integration or a system team. These groups will manage dependencies and have overall picture.</p>
+<p>An alternative is presented: microservice-driven teams organization. Each team works relatively <em>independently</em> from other teams, and <em>owns</em> set of microservices. Well...let's see.</p>
+<p>Just like embracing instead of managing changes (one of the Agile principles), this post explains why we should embrace dependencies instead of trying to avoid or "manage" them.</p>
+<p>Therefore, LeSS doesn't have roles, structures or architectural solutions to manage or reduce dependencies.</p>
+<p>Of course, dependencies do not magically stop to exist in LeSS. There is something else going on. Let's go through common types of dependencies. <!--more--></p>
+<h2>Dependencies between Product Backlog items</h2>
+<p>A customer problem is split into Product Backlog items. This act of refinement can introduce dependencies. Especially when split improperly. In other words, from architectural point of view. E.g. a larger item from customer becomes: a change in front-end, change in backend, and change in connectivity.</p>
+<p>On the other hand, splitting from a customer point of view reduces dependencies between constituent parts.</p>
+<p>Nevertheless, no matter how much we try, items in product backlog are still often interrelated. In fact, this dependency is a good thing. It also says something about coherence as we continuously deliver a single product.</p>
+<h2>Dependencies in design</h2>
+<p>At some point, items are small enough to be delivered comfortably by a single team in a single sprint. It sounds as if dependencies are resolved. Each team can deliver one or multiple items independently from other teams.</p>
+<p>Well..., not really. There is also something called coherent design or architecture. Having each team independently design own solution is not a good idea unless we talk about localized changes.</p>
+<p>Therefore, again, we want our design to be consistent. In other words, reducing dependencies in design activities is not a good idea. Coordination or shared design activities with multiple teams should be encouraged.</p>
+<h2>Dependency in code</h2>
+<p>A coder in one team makes changes in the same place as a coder in another team. We used to deal with this by having branches in order to prevent conflicts in code. We have also learned that this "conflict prevention" makes problems bigger later on when we need to merge.</p>
+<p>Also cycle time is not going to look good. Every change needs to be followed up by a possible merge, checking, fixing, testing, etc....</p>
+<p>Instead, we favor nowadays "trunk-based development". All teams, regardless of amount of teams, commit code into same trunk and integrate continuously. Therefore, conflicts are not avoided anymore but resolved immediately. Coders talk to each other as soon as conflict occurs. Since each conflict is limited in size, a resolution is relatively easy. It even triggers useful cross-team coordination.</p>
+<p>In other words, we want teams to coordinate as much as possible for the purpose of continuously integrating their work into a single potentially shippable increment.</p>
+<h2>But, what about microservices?</h2>
+<p>Aren't microservices solving dependencies problem?</p>
+<p>First, we need to mention a misconception about teams and microservices. The idea of each team owning (set of) microservices is NOT driven by microservices architecture, but by a bounded context in customer domain. Team’s focus is a specific part of customer domain that happens to entail number of microservices. There is a clear segregation through interfaces with other bounded contexts. Therefore, one team and nobody else will own and change specific microservices. A big assumption is that there is no shared code or shared services or very limited sharing.</p>
+<p>Therefore, a difference with feature team concept is <strong>shared ownership of microservices</strong>. Sharing is encouraged in feature teams and discouraged in microservices-based teams organization.</p>
+<p>[caption id="attachment_2035" align="alignnone" width="800"]<img class="alignnone size-full wp-image-2035" src="https://vgrgic.files.wordpress.com/2016/12/scannable-document-on-21-dec-2016-14_00_50.png" alt="scannable-document-on-21-dec-2016-14_00_50" width="800" height="520" /> Microservices-driven organization and delivering cross-service features[/caption]</p>
+<p>A customer wants a product that fulfills a need. A customer doesn’t want a microservice. Microservices is a nice architectural approach, but we are making a thinking mistake by somehow equating individual part (a microservice) to the combination of parts (set of microservices that provide together value to a customer). A customer request <strong>will</strong> cross boundaries of one group of microservices, regardless of how well we design those groups. The question is how do we act in such situation.</p>
+<blockquote><p>"We have resolved this by a better segregation. Our features don't cross bounded contexts"</p></blockquote>
+<p>No, you most probably started to duplicate code and data in order to avoid coupling between services and creating a big mess in the process. We already need to deal with too many solutions originally defined by a simplistic architecture. Let's not go that way.</p>
+<p>Since delivering a feature has often impact across groups of microservices, it will require multiple teams to deliver it. In such situation, a speed of delivery of a single microservice is not relevant if one needs to wait for other services to be changed anyway.</p>
+<p>Second, in large products / in time, microservices and their contexts have rather stable structure, while this can hardly be said for business needs / new requirements. Changing needs will start to mismatch structure of microservices. Also, some areas (groups of microservices) require no change. What do we do with teams that focus only on their own group of microservices?</p>
+<p>The main argument against organization according to microservices is that teams who are not bounded by microservices <strong>can get stuff done</strong> <em>and</em> also limit themselves to a group of microservices for better focus if they want to. At the same time, a microservice-bounded team is limited in capability to deliver. One has the flexibility of both, while the other one does not.</p>
+<p>[caption id="attachment_2065" align="alignnone" width="800"]<img class="alignnone size-full wp-image-2065" src="https://vgrgic.files.wordpress.com/2016/12/cross-component_teams.png" alt="cross-component_teams" width="800" height="566" /> Shared ownership of microservices or "shared services model"[/caption]</p>
+<p>Sam Newman in his book “Building Microservices” proposes several solutions as an alternative to what he calls “shared services” model (multiple teams working on a service). These are not literal statements, but summarized by me:</p>
+<blockquote><p><em>Microservice teams “move on to something else” until their dependency on other microservices is resolved.</em></p></blockquote>
+<p>This reasoning not only increases overall time to deliver but kills the idea of working on most important. In other words, team invents their own priority.</p>
+<blockquote><p>Shift people between teams in order to speed up development in the bottleneck.</p></blockquote>
+<p>This is a bad suggestion since it not only barely solves anything short term, it messes up the organization of teams, stability and the way of working.</p>
+<blockquote><p>Split request that affects multiple microservices even further until each of them touches only one microservice.</p></blockquote>
+<p>This implies that parts become technical, therefore not meaningful anymore to the customer. Besides, what would you rather have: One team making sure tiny parts are working together, or many teams making sure tiny parts are working together.</p>
+<blockquote><p>Internal Open Source: If above is insufficient or unwanted, then we let teams change any service they need to change where code custodians make sure things are done properly.</p></blockquote>
+<p>In other words: teams are not bounded anymore by a single group of microservices and start to share. :-)</p>
+<p>Nevertheless, if a microservice is truly a business capability, which is not just a for customer meaningless component, then it could be ok that team specializes in one or a limited set of microservices. This is not driven by the idea of microservices, but customer-domain specialization that happens to correlate with microservices. Therefore, it is not a dichotomy of either having microservice or feature (cross-component) teams. It could very well mean the same since a feature team doesn’t deal with <em>all</em> components anyway, especially when product is large.</p>
+<h2>In LeSS, we like dependencies….euhm, coordination</h2>
+<p>As concluded from each type, dependencies are not a problem. In contrary, we want and need teams to share work and coordinate, since that makes our products better. This behavior encourages teams to have whole product focus, to deliver fully integrated product instead of only parts.</p>
+<p>At the same time, the real challenge is the ways we coordinate. Postponed or asynchronous coordination through intermediate roles, groups and fixed structures is a cause of many problems driving a need for managing or resolving dependencies, while direct, free-flowing and immediate coordination has opposite effect.</p>
+<p>LeSS strongly encourages direct cross-team collaboration without any kind of indirection with the goal to create an integrated product. This goal drives focus and exposes potential for improvement. In addition to just talking to each other and several other coordination practices, a number of meetings are shared between teams:</p>
+<ul>
+<li>Sprint planning One (team representatives with Product Owner)</li>
+<li>Multi-team Sprint Planning Two (teams discuss and design similar or related features)</li>
+<li>Overall Product Backlog Refinement (team representatives with Product Owner)</li>
+<li>Multi-team Product Backlog Refinement (teams or few representatives, subject matter experts)</li>
+<li>One Sprint Review for all teams</li>
+<li>Overall Retrospective</li>
+</ul>
+<p>This supports cross-team learning, standardization, delivery of a cohesive product, coordination of shared work. Therefore, we don't call this <em>dependencies</em> since it is something welcomed.</p>
+<p>You can find more about this in the book: <a href="https://www.amazon.com/Large-Scale-Scrum-More-Addison-Wesley-Signature/dp/0321985710" target="_blank">Large-Scale Scrum by Bas Vodde and Craig Larman</a>.</p>

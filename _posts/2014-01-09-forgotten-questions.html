@@ -1,0 +1,45 @@
+---
+layout: post
+title: Forgotten questions
+date: 2014-01-09 23:59:18.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  geo_latitude: '22.319931'
+  geo_longitude: '114.157052'
+  geo_public: '1'
+  _edit_last: '6260502'
+  _publicize_pending: '1'
+  publicize_facebook_url: https://facebook.com/10202769971227226
+  _wpas_done_5350022: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1138509452;b:1;}}
+  publicize_google_plus_url: https://plus.google.com/111445102811033280399/posts/4Tm8Hvip5YX
+  _wpas_done_5350032: '1'
+  publicize_twitter_user: vgrgic
+  publicize_twitter_url: http://t.co/bZv77zTcoj
+  _wpas_done_5350037: '1'
+  publicize_linkedin_url: http://www.linkedin.com/updates?discuss=&scope=1513462&stype=M&topic=5827976686217469952&type=U&a=jzJo
+  _wpas_done_5350035: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>In the conversations with users or customer we ask many questions. Some of them are about how the solution should work, some of them are about what functions should solution provide, and if we are really good with questions about "why" this solution is needed. In case of Scrum we also ask questions about priorities. Which story or epic do they want first to be delivered.</p>
+<p>Forgotten questions are about the <strong>frequency of usage</strong>. For example:</p>
+<ul>
+<li><strong>How often</strong> are company details (reference data) changed?</li>
+<li><strong>How often</strong> do you need to print list of all companies?</li>
+<li><strong>How many</strong> people are going to use this?</li>
+<li>May I observe you during your work while using the existing system? I would like to see <strong>how often</strong> and in which order you use certain functions.</li>
+</ul>
+<p>Besides prioritisation, an important reason for answering these questions is <strong>design</strong>. For example, if certain reference data is changed only once a year, then it might be cheaper to  have reference data hardcoded instead of a database table. The first option is much simpler to implement and performs much better. Also a common example is implementation of messaging systems. A very expensive message queuing system, SOAP processing, or even an ESB is placed just to process one message a day on average, and with max of 5 messages occasionally. Email was maybe good enough.</p>
+<p>Another reason might be <strong>migration path</strong>. Sometimes, it is acceptable to postpone implementation of certain features in order to choose a less risky path, and still go in production. Making a right choice of implementing or temporarily not implementing features when migrating from one system to another can be extremely complex. This can be reduced by knowing how often certain capabilities are needed.</p>
+<p>Maybe the greatest reason of all is the validity of building something. Sometimes a system should be not built at all simply because the features are rarely used. It happens quite often that business owner wants to spend money on a solution based only on assumptions about how much time and accuracy is really lost in all the manual work that will be replaced by a costly system.</p>

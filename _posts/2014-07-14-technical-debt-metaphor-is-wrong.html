@@ -1,0 +1,50 @@
+---
+layout: post
+title: Technical debt metaphor is wrong
+date: 2014-07-14 18:59:05.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  gplus_authorship_disabled: '1'
+  _edit_last: '6260502'
+  geo_public: '0'
+  _publicize_pending: '1'
+  publicize_facebook_url: https://facebook.com/10204093956926041
+  publicize_google_plus_url: https://plus.google.com/111445102811033280399/posts/YRGsoLpPMco
+  _wpas_done_5350022: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1138509452;b:1;}}
+  _wpas_done_5350032: '1'
+  publicize_twitter_user: vgrgic
+  publicize_twitter_url: http://t.co/XEKf2CN1Bo
+  _wpas_done_5350037: '1'
+  publicize_linkedin_url: http://www.linkedin.com/updates?discuss=&scope=1513462&stype=M&topic=5894407806492106752&type=U&a=iiks
+  _wpas_done_5350035: '1'
+  _wpas_skip_5350022: '1'
+  _wpas_skip_5350032: '1'
+  _wpas_skip_5350037: '1'
+  _wpas_skip_5350035: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>Martin Fowler has <a href="http://martinfowler.com/bliki/TechnicalDebt.html" target="_blank">an explanation</a> of technical debt metaphor as originally defined by Ward Cunningham. Many have misunderstood this metaphor. Interestingly, even Fowler gives an explanation, which fits the metaphor, but not explanation by Ward Cunningham. Cunningham even warns audience to not mistake this metaphor with intentionally creating unwanted design or a mess. Cunningham does not believe in "dirty way of doing things" as explained by Fowler, just to fix them later on. Fowler mentions deadlines as a major reason for quick and dirty. I believe that deadlines themselves are the actual problems, and therefore not a good reason.</p>
+<p><a href="https://vgrgic.files.wordpress.com/2014/07/debt-free.jpeg"><img class="aligncenter size-full wp-image-1741" src="http://vgrgic.files.wordpress.com/2014/07/debt-free.jpeg" alt="debt-free" width="425" height="282" /></a><!--more--></p>
+<p>I've used the term very often. At first, it was because I didn't completely understood the metaphor, but it sounded cool and helped me a lot in driving design in line with XP practices. When I started to think about word "debt", I was confused. I kept applying something because it fitted my perception of continuous improvement with obviously nice effect, without much thinking about the metaphor itself.</p>
+<p>According to Fowler, the intent of technical debt is to consciously make suboptimal decisions for the sake of speed or urgent business need, and rectify them later on when the speed is less needed. Technical debt would imply that we actually know a much better design, but we choose not to implement it right now. This either means we are predicting the future requirements reflected in some imaginary design, or/and technology does not allow us to incrementally deliver usable system all the time. In other words, we need to make shortcuts, because implementing this technology takes much longer than acceptable for business.</p>
+<p>It happens that I never willingly was in such situation. Even if it was urgent, making shortcuts usually meant introducing bugs and general lack of quality. In other words, I would always choose the most optimal design I can think of <strong>for the current requirement</strong>.</p>
+<p>http://www.youtube.com/watch?v=pqeJFYwnkjE</p>
+<p>I have used term technical debt to deal with new insights or things we learn - also mentioned by Cunningham - as a result of changing requirements or any larger improvements I would discover. Smaller ones were dealt with during normal TDD cycle ("The Boy Scout Rule"). In Agile software development, design has a continuous property. It starts with the simplest and best possible approach for the current need. Of course, there are many more requirements we don't know yet, and even the implemented ones will change. These will have inevitable effect on "the simplest and best possible approach" we had in beginning. I used term technical debt to name and manage these effects. As soon as I knew my existing approach was slightly or completely wrong, I try to deal with it right away. Some of these changes can be big. They would be gradually implemented and spread over multiple iterations, in which the real business value usually has higher priority.</p>
+<p>In case of large systems, there could be a whole list of newly discovered insights. It would sometimes take months before they are implemented. In meantime, a new ones are continuously discovered, resulting in a permanent list of improvements. Although I called it technical debt list, I'm not paying interest. I rather constantly discover new ways of saving money and try to implement the improvements as soon as possible. Since the trigger for improvement is always some new business requirement, the improvement itself is connected to this requirement and implemented as such. It would be a debt if we would neglect improvement despite obvious legitimate reason driven by a requirement. That would be stupid, wouldn't it?</p>
+<p>In fact, this way of thinking is not new at all. It is already part of Test-Driven Development. The refactoring step is where we look at where we stand and make improvements after each requirement is implemented. Only relevant difference is that on larger system- and time scale some requirements are difficult or impossible to implement without first improving the existing design. In TDD, refactoring is primarily driven by principles such as SOLID, while on bigger scale improvements are more driven by business requirements. The requirement places natural improvement boundaries; we should not start improving things not related to this current requirement. There is simply no rational reason to do that.</p>
+<p>Although the term technical debt helped me a lot, I do think it breaks too easily and therefore causes misunderstanding. There is no such thing as getting into financial debt and paying interest without knowing that first. In software development, we don't actually know if our choice is going to be a "debt" later on. Some would think: who cares if we know we are in debt! Well, in that case, any software solution is just a financial debt that will be paid back later by gradual or complete replacement by something better. In other words, nonsense.</p>
+<p>With right knowledge and technology, anything can be implemented in an incremental way nowadays. Therefore, I don't believe we need to make suboptimal choices. Instead of talking about technical debt, we should use technology capable of fast delivery where every choice we make is the right one at that moment with existing knowledge and capabilities.</p>
+<p>It seems that the only correct usage of this metaphor is as an anti-pattern. Quick-and-dirty solutions are costly. This creates a costly debt, where cost grows very fast in time. It is therefore a bad practice to write quick and dirty code, even for seemingly legitimate reasons like deadlines.</p>
+<p>One of my customers mentioned they didn't have time to write high quality code with proper design. Their users just could not wait. The second question was how much time they spend fixing things. It was 30% on average.</p>

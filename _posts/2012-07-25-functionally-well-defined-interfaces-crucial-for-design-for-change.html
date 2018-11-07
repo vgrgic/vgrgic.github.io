@@ -1,0 +1,44 @@
+---
+layout: post
+title: Functionally well-defined interfaces crucial for 'Design for Change'!
+date: 2012-07-25 14:32:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  blogger_blog: blog.leanarch.eu
+  blogger_author: Viktor Grgic
+  blogger_972bc0b559603e4cbf70df50f817aae3_permalink: '716639650655170795'
+  _oembed_149cf7459b370975221b76216c5be63b: "{{unknown}}"
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>As elaborated in an <a href="http://blog.leanarch.eu/2012/07/design-for-change-as-agile-architecture.html" target="_blank">earlier post</a>, 'Design for Change' is one of the main architectural principles in Agile. So, while the '<b>why</b>' is explained earlier, one of the <b>how's</b> (proper interfaces) is explained in this one.</p>
+<h3>Interface definition is not about technology</h3>
+<p><a href="http://vgrgic.files.wordpress.com/2012/07/2542a-231834610.jpg" style="clear:right;float:right;margin-bottom:1em;margin-left:1em;"><img border="0" height="320" src="http://vgrgic.files.wordpress.com/2012/07/2542a-231834610.jpg?w=300" width="320" /></a>The proper interface definition practices are about as old as programming. Still, wrongly defined interfaces are one of the common and major impediments in delivering a system designed for change.</p>
+<p>An important misunderstanding about interfaces between components or systems is that it is all about technology and techies should take care of it. But, how much does it really cost to implement or refactor e.g. from SOAP to REST; or from JMS to HTTP? Practically nothing when compared to functionally highly coupled components because of badly defined interface regardless of technology.</p>
+<h3>Never make generic interfaces</h3>
+<p>One of the worst practices in this area are so called SOAP gateways or ESB's, which only make technical stuff more complex and when connecting two systems, still requiring from involved parties to define functionally working interface. This real interface is not explicit anymore, often described in some large document, and hidden deep in involved systems.<br />So, what is the problem? Well, most of the changes in service providing systems have huge costs because of the impact on consuming systems / components and middleware.</p>
+<p>One of the bizar things architects tend to say is that things like SOAP gateways or ESB's decouple systems, because you can place anything in the request and response placeholders. It's like: let's forget about language so we can say to each other anything we want.</p>
+<p>Making functionally explicit, fit for context and purpose, simple, and specific interfaces between components, understandable by product owner and sometimes even users gives you a lot of space to move and change. It also makes all real dependencies explicit and easy to use.</p>
+<p><span style="background-color:white;">For example:</span>
+<ul>
+<li><span style="background-color:white;">one generic: <span style="font-family:'Courier New', Courier, monospace;">update(bookReservation)</span>;</span></li>
+<li><span style="background-color:white;">multiple specific methods: <span style="font-family:'Courier New', Courier, monospace;">reserveBook(bookId,customerId); cancelReservation(bookId); bookReturned(bookId);</span> and so on.</span></li>
+</ul>
+<p><span style="background-color:white;">Also, if consuming components only need few details of a book reservation; do not send the whole source object, but create a separate DTO (Data Transfer Object) containing only these fields. It is always easier to extend this later if more is needed, than to change existing field.</span></p>
+<p>Agile or not, changing an interface functionally is expensive. Think about complexity of having multiple versions and so on. Single most imporant factor to reduce this costs is to make very explicit interfaces. It means that your interface only describes the strictly necessary information for the purpose and nothing more. This all does not mean that you always define fine-grained interfaces. In contrary, you don't want separate methods for each field of an object, but rather to have one BookReservationDTO used by as many as possible service consumers. Defining such objects is a balancing act mainly influenced by specific domain and how realistic it is to have one object for all consumers. Because we do stuff in an Agile manner, we can safely name our object BookReservationDTO containing only the bare minimum of fields.</p>
+<h3>Well-defined interface is a powerful wedge for changes</h3>
+<div class="separator" style="clear:both;text-align:center;"><a href="http://vgrgic.files.wordpress.com/2012/07/c41be-upvc-lever-wedge-47-p.jpg" style="clear:right;float:right;margin-bottom:1em;margin-left:1em;"><img border="0" height="200" src="http://vgrgic.files.wordpress.com/2012/07/c41be-upvc-lever-wedge-47-p.jpg?w=288" width="191" /></a></div>
+<p>There is another reason why we appreciate good interfaces so much. It makes a whole new range of creative solutions possible. <span style="background-color:white;"><br /></span><br /><span style="background-color:white;">I learned this example from Michael Franken (Zilverline): Imagine wanting CRM solution really fast, but don't know all needed features yet and buying complete solution so early is also very expensive. In other words, unwanted big bang with all disadvantages. But you also don't want to build it yourself.</span><br />You could build only user interaction stuff with simplest possible technology while backend is just a database or some in memory solution. No interfaces to others systems and complex business rules and logic. You do make sure from start that interfaces from user interface to the repository with data are very well defined. Later on, you can (gradually) replace this backend database solution with fully featured out-of-box CRM solution. You can also use these interfaces as perfect specs for buying such system.</p>
+<h3>Conclusion</h3>
+<p>Also Agile teams need to be very careful when defining interfaces. But, it's all about functionally well thought-out interfaces and not about SOAP, REST and so on. These are simply not important, because they are cheap to change or add. Agile says: "Do The Simplest Thing That Could Possibly Work".</p>

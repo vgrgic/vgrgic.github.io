@@ -1,0 +1,62 @@
+---
+layout: post
+title: Fast changing vs. stable backbone & IT departments
+date: 2014-07-15 16:45:58.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '6260502'
+  geo_public: '0'
+  _publicize_pending: '1'
+  publicize_google_plus_url: https://plus.google.com/111445102811033280399/posts/1joFE2UjyLv
+  publicize_facebook_url: https://facebook.com/10204102415017488
+  _wpas_done_5350022: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1138509452;b:1;}}
+  _wpas_done_5350032: '1'
+  publicize_twitter_user: vgrgic
+  publicize_twitter_url: http://t.co/uSXRAnSNPW
+  _wpas_done_5350037: '1'
+  publicize_linkedin_url: http://www.linkedin.com/updates?discuss=&scope=1513462&stype=M&topic=5894733418809274368&type=U&a=tz1r
+  _wpas_done_5350035: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>IT departments in corporate world seem to have twofold management. Depending on affected systems, CIO's will have completely different approaches to software development and operations. A traditional one for crucial or primary IT systems, and an Agile one for less relevant or fast changing business requests.<!--more--></p>
+<h2>Stable backbone</h2>
+<p>Regardless of architecture type, a large company has primary software systems, an IT backbone or engine they highly depend on. This usually implies backend systems, but could also be user-facing software. Stability and overall quality is rather important. Perception is that any change is risky, therefore frequent changes are not welcomed. The projects with change or replacement goals are big, complex, involve a lot of architecture, long-term planning, decision making, etc. Any Agile approach in this area feels risky, unnecessary, not serious enough, and too uncontrolled. There is a tendency to think:</p>
+<blockquote><p>Agile is for less risky and less crucial stuff.</p></blockquote>
+<h2>Fast changing systems</h2>
+<p>In the very same companies, same CIO's are embracing Agile / Scrum, usually because they see opportunity for faster delivery, and hopefully making business and users a bit happier. Interestingly, they often have <a href="http://en.wikipedia.org/wiki/Shadow_IT">Shadow IT</a> problem and Agile practices are seen as a compromise.</p>
+<p>These new teams will have freedom to organise and decide as they wish. The solutions they are working on is the "new age" stuff. Fancy mobile apps, cool sites, latest technology, Ruby, Python, Scala, Swift, etc. In other words, usually user-facing solutions.<br />
+The most visible difference with stable parts is the amount of policies and regulations. Even in banking world, the Agile teams are exempt from most of these limitations.</p>
+<p>Effect of this differentiation can be quite extreme. Not only separate rules apply to each of the domains, but also teams, roles and responsibilities are completely divided. Someone from an "Agile frontend" domain is not allowed anywhere near core backend systems. Every change request and even usage has to go through complex chain of approvals.</p>
+<p>So far, so good. It sounds like proper management of an IT department, right?<br />
+Well, not really. There are several and often not visible issues:</p>
+<ol>
+<li><strong>Dependencies: </strong>Any interface between front- and backend has dramatic influence on delivery speed. An Agile team with regular dependency on 6+ months backend change cycle will hardly benefit from being Agile. Sadly, this inability to change dependent systems spoils the promise of really being Agile and delivering value. Some will even say: "You see, Scrum can't solve this problem either".</li>
+<li><strong>Inferior solutions: </strong>A frontend solution developed with assumption of stable / unchangeable backend has much less value. The main reason is that interfaces are old and not built with newest requirements and technologies in mind. An iPhone app may look fancy, but overall experience is inferior to something completely driven by current business need and less restricted backend.</li>
+<li><strong>Component teams: </strong>This fast changing vs. backbone thinking drives creation of component instead of feature teams. Component teams are a bad idea, as <a href="http://featureteamprimer.org/feature_team_primer12.pdf">thoroughly explained</a> by Craig Larman and Bas Vodde.</li>
+<li><strong>Unfinished: </strong>Agile teams tend to deliver fake "potentially shippable product". It means they really deliver their increment correctly, which falls under their responsibility. But, the product cannot be shipped because a backend system is not changed yet. Also, testing against an interface with some <a href="http://martinfowler.com/articles/mocksArentStubs.html">Test Double</a> implementation is never as good as a real system.</li>
+</ol>
+<h2>Real improvement</h2>
+<p>The root cause is not the mere existence of stable backbone systems. Any large enterprise has a number of these systems with extreme quality requirements. Consciously dividing landscape into technical domains with different stability requirements, and treating them differently is a good thing.</p>
+<p>Instead, there are other root causes and several painful improvement possibilities:</p>
+<h3>Large stable / small fast changing domain</h3>
+<p>Stable backend systems tend to contain too specific - use case dependent, and therefore too much business logic. Exact division between stable and fast changing domains is usually accidental or has become bigger and bigger throughout years with new requirements. The solution is to gradually clean up and move these parts into more fast changing domains.</p>
+<p>Btw, SOA introductions have made this problem only worse. In order to prevent silos, everything meaningful for business is placed behind service implementations, which are placed behind ESB, orchestration tools, etc. By nature, any service becomes part of "stable domain" and therefore difficult to change. Because of bad service contracts (high coupling) the problem is not limited to interface definitions.</p>
+<h3>Automated testing</h3>
+<p>This one is straight forward: A large / old system without proper automated tests is costly or impossible to refactor. Risks caused by frequent changes are not a fact of life anymore. Automated testing is the solution. Today, building a long lived software product without comprehensive automated tests on several levels is amateurism.</p>
+<p>Nevertheless, one definition of legacy is a software in production without automated tests. So, there is a lot of legacy out there. But, there are also many techniques, like TDD, to gradually and safely change that.</p>
+<h3>Trust your Agile teams with changes in backend</h3>
+<p>The management should allow teams to take responsibility and collaborate freely. <strong>How we organise architectural domains should be separate from how we organise teams</strong>. In other words, teams forming should not be driven by technical architecture or components. The feature teams should be allowed to make changes in backend. An experienced team will learn necessary rules and regulations, but also expose many problems in architecture and change-request process. Only having cross-component feature teams instead of component teams makes a huge difference.</p>
+<p>None of these solutions are quick wins. It takes time and effort to bring real improvements. The aiming goal is to create an IT landscape where these backbones are smaller, simplified and much better tested. In turn, this creates more space for movement and change. Despite high risk, we already have technology and practices to continually change and evolve them just as fast as frontend systems.</p>
+<p>There is nothing in Agile which makes it applicable only in less important or fast changing environments. In fact, the biggest advantages are most visible when Scrum is applied for business critical solutions. They are not "stable" by nature, but because of dangers of breaking something.</p>

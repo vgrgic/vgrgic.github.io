@@ -1,0 +1,47 @@
+---
+layout: post
+title: Is there a such thing as an Agile solution?
+date: 2014-02-11 08:38:03.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags:
+- agile
+- architecture
+- platforms
+- solutions
+- vendors
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _edit_last: '6260502'
+  _publicize_pending: '1'
+  _wpas_skip_5350022: '1'
+  _wpas_skip_5350032: '1'
+  _wpas_skip_5350037: '1'
+  _wpas_skip_5350035: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>Today, many software product vendors have placed word Agile in front of the original name of their platform. If this is a proper use or misuse of word Agile, is up to you. The discussion about it might be useful, but I'm interested more in how good each of the platforms support Agile values. For anyone to assess this, a set of principles is needed. These principles can be used by Agile teams to better decide if a certain platform will help achieve your goals or stand in your way. So let's start:</p>
+<p><strong>1. It is the team that makes architectural decisions. A platform should be capable of fulfilling these decisions.</strong></p>
+<p>Many platforms have so called out-of-box architecture. It means that <em>significant</em> decisions are already made and defined by the platform. In this context, significant decision means any decision which strongly influences the structure and look of the solution. I am not talking about the commodities like messaging systems, application server platform, database, and so on. There is a certain, hard to define, line between what is a commodity and what not. The significant decision here is still wether you want to use certain commodity platform / component or not. But, you almost never want to mess with inner workings of such components. Directly, they have little to do with your business problem domain. This is often not the case for things like BPM tools and ERP platforms. Why not? They tend to intrude the space of the only people who are really capable of fulfilling the business need, which are Agile teams themselves. Signs of this problem is when platform has very specific ways in which certain business requirements are solved or no capability at all. Let's say: if you want to do payment on your website, then you must use a specific module for these credit cards.</p>
+<p><strong>2. If you first need to spend time on implementing some kind of baseline without direct value for business, then it ain't Agile.</strong></p>
+<p>Welcome to 21st century where you still have vendors who try to convince you that you need to be patient for half a year or a year. You spend 500.000 euros before seeing a failure, because of your own fault. "You shouldn't have changed your requirements!" or "You should have known your requirements before you started!" - says the vendor in <a href="http://www.cio.com/article/443864/SAP_Fires_Back_At_Waste_Management">a court</a>. Forget the promises, if your team is not capable of delivering value in production in one sprint, then the platform does not belong in this century.</p>
+<p><strong>3. Is a platform capable of delivering in production continuously?</strong></p>
+<p>I must admit, although I do know how difficult can be to properly deliver things in production, I almost get convinced by those sales presentations where things look like magic. A few hard questions later and this magical stuff proves to be nothing more than hot air. Until your team actually experiences and exactly knows how to deliver solution every couple of weeks (preferably after every check-in) with little effort and high quality, don't trust those nice looking PPT pictures.</p>
+<p><strong>4. Craftsmen deliver value, not platforms</strong></p>
+<p>First statement on a typical vendor site begins something like this: "With our software you will reduce costs, speed time to profit, get real time visibility,..." and so on. I should make a software to produce these generic statements, so all these vendors can reduce their costs. :-) It sounds like a good business case. Anyway, no software implements itself. Even a rollout of MS Office can become a mess if you don't have craftsmen knowing their stuff. In other words, no software platform ever delivers business value. It is the people who actually know how to use this technology in specific context. As a customer, if you want to be Agile, you should spend more time on hiring great craftsmen, and less on which platform is the correct one. This should be the job of the hired craftsmen and not yours. In that way, your team might fail to produce value and be held accountable. Blaming a platform, never really works out in customer's favour. Specially if vendor behind it is one of the largest ones.</p>
+<p><strong>5. The team should be able to refactor most of the previously made decisions and implementations?</strong></p>
+<p>If anyone advise you to make many difficult and important design decisions before starting delivery, because otherwise you will get in trouble later on, then your platform is not Agile. If business changes their mind, the platform should not be the bottleneck. Again, it is the 21st century, and you don't want to say No to your customer and users because of the platform.</p>
+<p><strong>6. Can you automate testing?</strong></p>
+<p>One of the main reasons why Agile teams are capable of delivering every couple of weeks or even more frequent, and still maintain high quality, is because of test automation. TDD, BDD are few of these amazing practices that improved quality of our solutions tremendously. If you cannot automate the validation of everything before every delivery, then your platform is definitely not Agile.</p>
+<p><strong>7. Last but not least, if your craftsmen don't like the platform, don't use it.</strong></p>
+<p>It is very disturbing to hear people treat developers like some children who get bored with their toys. Although many developers lack skill to properly argument their dislike of certain technology, there is always a truth in what they are telling.</p>

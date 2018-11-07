@@ -1,0 +1,24 @@
+---
+layout: post
+title: Architectural requirements in Scrum
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: draft
+categories: []
+tags: []
+meta: {}
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>One of the mantras stated when criticising Agile and Scrum is that quality attributes (scalability, security, availability, and so on) or non-functionals are neglected. There suppose to be no or too few practices in order to make sure these are covered. A good point that needs some explanation.</p>
+<p>First, quality of a solution is for Scrum teams very much important. Attention for these attributes are actually built in the process. But, before I explain in which they are taken care of, let me discuss them first:</p>
+<p>Which of these quality attributes is actually system-wide? E.g. responsiveness? No, this one depends completely on specific function. An action performed very often should usually perform much faster, than one used only once in a while. Confidentiality? Which piece of information is sensitive? Probably not all. Again, it depends very much on one or limited number of functions. Availability? What information, or which part of system exactly needs to be more available and why? This question might be irrelevant in smaller systems, but very important in larger ones. The answer could steer us towards very different solutions. Should we have a relatively cheap backup system with very limited set of data? Should we be concerned with information received through messaging, or is longer down time there acceptable? Interoperability? I would even know how to solve this one system-wide. Without knowing information that will be exchanged, there is not much to be said system-wide. Any system built these days can exchange information with other systems. The question is more which information, and what is the most effective way to this.</p>
+<p>As you probably guessed, most of these attributes are and should be part of business epics or user stories. Just to be very clear, these are no architectural epics or technical stories. All of them can and should be explained from business perspective. E.g. "As a VTS operator I need to know where mored ships are located with max 5 minutes unavailability in order to ...".</p>
+<p>At the beginning of any Scrum project, basic understanding of the whole problem ahead is acquired. This usually means that product vision and first draft of epics is created together with everyone involved. This provides enough information to understand crucial architectural requirements. This drives </p>

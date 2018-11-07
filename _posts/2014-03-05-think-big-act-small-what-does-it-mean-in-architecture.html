@@ -1,0 +1,60 @@
+---
+layout: post
+title: '"Think big, act small" - what does it mean in architecture?'
+date: 2014-03-05 19:17:49.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- agile
+- agile architecture
+- architecture
+- software architecture
+tags: []
+meta:
+  _edit_last: '6260502'
+  _publicize_pending: '1'
+  _wpas_skip_5350022: '1'
+  _wpas_skip_5350032: '1'
+  _wpas_skip_5350037: '1'
+  _wpas_skip_5350035: '1'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>"Think big, act small, fail fast, learn rapidly" is a statement made by Mary and Tom Poppendieck in the book: Lean Software Development. It is a profound statement.</p>
+<p>Nevertheless, it seems we still have so many people having never ending discussions about Architecture and Agile. The questions like: <strong>"How much architecture should we have before starting development?"</strong> or <strong>"Can architecture emerge by doing TDD?"</strong>. The typical answer is something like: "Well, you should definitely spend a few weeks" or "It can emerge, but it does not happen by itself". Also, we love to disagree with other side based on statements full of ambiguous words.</p>
+<p>One example is <a href="http://philippe.kruchten.com/2013/12/11/agile-architecture/" target="_blank">Philippe Kruchten's post</a>. Another one is a talk <a href="http://www.infoq.com/presentations/Agile-Architecture-Is-Not-Fragile-Architecture-James-Coplien-Kevlin-Henney" target="_blank">"Agile Architecture Is Not Fragile Architecture"</a> given by James Coplien &amp; Kevlin Henney. There is a huge amount of blog posts by a bit less respected names than these, trying to explain wether agile and architecture contradict each other, should find a compromise, or is a marriage made in heaven.</p>
+<p>The problem here is that we are talking about architecture as a <strong>thing. </strong>But, you cannot <em>hold</em><strong> </strong>architecture and you cannot point your finger and say: "There it is!". It is an abstract concept, just like Agile. Abstract concept * abstract concept = unlimited number of assumptions!. The questions above are simply invalid. What exactly do you <strong>need to have</strong> before starting development, and what exactly emerges from TDD? Answers on the first questions above are arbitrary, and do not give us insights.</p>
+<p>This brings me to think big, act small statement. James and Kevlin do state that Agile never forbids to <strong>think</strong> about architecture up-front, as opposed to actually putting one in stone. That is clear and useful. But then, they confuse a hell of it by stating things like, we must have some up-front design, called RUFD (Rough Design Up Front). So, how much is "rough" and what is it? Jim emphasises abstract classes, and Kevlin interfaces, and "some" documents, and so on. It is eventually one hour of endless explaining of subtleties of an abstract concept, which by itself without specific context does not mean much.</p>
+<p>After this opinion of mine, it might amaze you that I actually totally agree with pretty much everything they say. I just want these well-respected names to tell things that are actually usable in practice and a bit less prone to so many possible interpretations, causing huge failures.</p>
+<p>The big confusion is caused by lack of clear distinction in the process of what we call architecture. Let me try to make some distinction:</p>
+<p><a href="http://vgrgic.files.wordpress.com/2014/03/architecture_process.png"><img class=" wp-image-955 alignnone" alt="architecture_process" src="http://vgrgic.files.wordpress.com/2014/03/architecture_process.png" width="646" height="172" /></a></p>
+<h2>Look ahead or have a vision</h2>
+<p>I never heard anyone saying that we should not spend time looking ahead, and <strong>having a clear vision</strong> of the product from different perspectives. "Think big" is the first part of Poppendiecks statement. I guess Philippe did hear that from some Agile coaches. Some might overlook the first part, and go directly for the second.</p>
+<p>By having a vision, I mean first and foremost that everyone involved has it in their head. Is it also placed on a paper? Irrelevant question! It is just a mean of communication. Use youtube if you want, be creative. I don't care, as long as you fulfil <strong>a real need</strong>. You can't do much without knowing this need first.</p>
+<p>There is a whole range of practices helping to define a vision. Some of these practices are not called "architectural" but definitely cover things considered architecture. Currently, we don't have enough practices and games to support teams in this process. Yes, we do have a huge amount of overloaded architectural processes like TOGAF staying at meta level, focusing on navel-gazing models, producing documents. We need you (yes, I'm talking to you Jim :-)) to help in this process, tell about <strong>useful</strong> practices.</p>
+<h2>Make decision</h2>
+<p>Some, when talking about architecture, mean to say: making or having a <strong>significant</strong> decisions about used programming language, technology, visible (system and user interface) or invisible (internal) structure. The main problem here is: What is significant? How much is really significant? Which things to postpone and how? What are the driving forces behind this? And, shouldn't we use technologies and design techniques which enable us to minimise these significant decisions? Which one help us and which don't?</p>
+<h2>Design it</h2>
+<p>So, once we have this decision, <strong>w</strong><strong>hat do we do with this decision? </strong>The biggest and very clear difference between Agile and traditional dealing with architecture is the things we do <strong>after</strong> we have a significant decision. So, we usually design stuff. With design, I mean draw a picture or implement some code in order to....what? Prove it to someone? Whom? And is it a real proof without delivering real functionality in production first? Also, are we talking about overall internal design? E.g. definition of components on highest level, applying specific approach like CQRS, and so on. Or are we talking about user interface, or maybe something at lower level. E.g. caching technology, abstract classes, and so on.</p>
+<p>Which one do we need to define beforehand and why? These things are completely different from each other and should be treated as such. We don't have good enough answers to this question. Also, word "design" is just as ambiguous as "architecture".</p>
+<p>Besides, from a perspective of doing things up-front: How much time do we spend in this mental exercises compared to failing after 3 sprints and learning from failure? The devil is in these details. There are many different opinions and practices here:</p>
+<ul>
+<li>Abstract classes as mentioned by Jim.</li>
+<li>Interfaces as mentioned by Kevlin</li>
+<li>TDD will create proper design, so nothing up-front</li>
+<li>Agile software architecture sketches by Simon Brown</li>
+<li>and so on</li>
+</ul>
+<p>Again, this is all great, but every single of them is completely arbitrary and so much context-dependent. Completely pointless discussing which one is good or bad. The reality is simply: tell me the context, and I will do my best to explain what the wisdom is.</p>
+<h2>Build it</h2>
+<p>Again, a relevant question here is wether we <strong>build </strong>overall decisions up-front or not. DSDM, so called Agile methodology, spends during elaboration phase (up-front) huge amounts of effort <strong>building</strong> significant decisions with, if you are lucky, one implemented use case.</p>
+<p>Is this good, bad or inevitable? Again, it depends hugely on technology used and context. Luckily, there are more and more technologies, languages, and tools which lower the price of refactoring. It would be more interesting to have discussion about what kind of decisions must be put in code before starting with first user stories. It would also be interesting to see if we have or can improve certain technologies or design techniques in order to lower the price of refactoring.</p>
+<p>Please, be reminded that distinction in different "steps" I make in this post is not my real message. You can probably make a better one.</p>
+<p>My message is: Let's not oversimplify these things by using generic words like architecture, design, structure, and so on. Let's simplify things by talking about concrete things we actually do in software projects.</p>

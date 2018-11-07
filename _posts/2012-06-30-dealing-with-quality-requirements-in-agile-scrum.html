@@ -1,0 +1,99 @@
+---
+layout: post
+title: Dealing with quality requirements in Agile / Scrum
+date: 2012-06-30 15:59:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  blogger_blog: blog.leanarch.eu
+  blogger_author: Viktor Grgic
+  blogger_972bc0b559603e4cbf70df50f817aae3_permalink: '7900234695437698882'
+author:
+  login: vgrgic
+  email: viktor@leanarch.eu
+  display_name: Viktor Grgic
+  first_name: ''
+  last_name: ''
+---
+<p>You have probably heard of non-functional requirements. One of the most used phrases by architects. Rather ridiculous if you consider it means 'broken' in English. The term is already being transformed into "quality requirements" by many.</p>
+<p>Example of a quality requirement: response time of a specific request in our system. Or more ambiguous: suitability or maturity. The last two are part of <a href="http://en.wikipedia.org/wiki/ISO/IEC_9126" target="_blank">ISO/IEC 9126 standard</a> full of other nice sounding academic words. ISO/IEC 9126 with all the ilities was for me never really useful in practice because it replaces common sense, which proved to be much better without the standard. The common sense of defining our ilities should always be driven by explicitly stated requirements from users and stakeholders. </p>
+<p>Question: <i>"In how much time does user wants to complete his registration?"  </i><br />Answer: <i>"About one minute... In that case, number of clicks should be very low and response times very fast." </i></p>
+<p>My point is: I don't need some standard to figure this out. What I do always need is a way to identify them based on real needs from users and business, sometimes quantify them, but mainly a way to measure them.&nbsp;The answer came partially from Planguage created by Tom Gilb. Although I must admit I use it in a rather simplified manner.  A quality requirement which I wish to precisely identify and follow is placed in the following table: 
+<div class="p1"></div>
+<table cellpadding="0" cellspacing="0" class="t1">
+<tbody>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Tag</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>A unique identifier of the quality requirement</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Description &nbsp; &nbsp; &nbsp; &nbsp;</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>Identifier a bit more explained</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Scale</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>The scale of measure used to quantify the statement</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Meter</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>The process or device used to establish location on a Scale</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Must</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>The minimum level required to avoid failure</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Plan</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>Realistic level considering we have limited budget and time</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1">Wish</span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i>User and business would say “Wauw!” if we achieved this level</i></span></div>
+</td>
+</tr>
+<tr>
+<td class="td1" valign="top">
+<div class="p2"><span class="s1"><b>Current</b></span></div>
+</td>
+<td class="td2" valign="top">
+<div class="p2"><span class="s1"><i><b>Currently measured level after each sprint</b></i></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Nice thing about Scrum is that when you deliver software after each sprint, users and business can tell you how satisfied they are and if quality in identified areas has improved. Even better is the fact that for most of the quality requirements you don't need to define them before sprint starts, but simply make a best guess, measure qualities afterwards and improve them in the next sprints. </p>
+<p>For me the most important part of quality requirements management is the "current" value part. Is it high or low enough? No? Let's improve it!</p>
+<p>Question: <i>"How easy to use should this page be?"</i><br />Answer: <i>"We have no idea, because we don't know how often user will use it and it is too much hassle to find that out. User sometimes think she will use it often, but eventually she doesn't. It is costly to make it very user friendly. Let's choose the basic / cheaper version and hear from first users what they think about it. If they are not happy, we'll adjust it accordingly in the following sprint".</i><br /><i><br /></i>Another nice thing about Scrum is disappeared need for heavy requirements management because of so many feedback loops. For most of them, we simply don't need to think about quality requirements much. As soon as you deliver software after each sprint, requirement (e.g. system stability) is going to hit you back (e.g. system down time) and team must improve it. On other hand, this should not prevent a team from making sure that obvious requirements are in place before end of a sprint as part of <i>Definition of Done</i>. E.g. "after this sprint we'll have aprox. 1000 users and 100.000 requests per day. Can our system handle this load?</p>
