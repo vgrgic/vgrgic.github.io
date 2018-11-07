@@ -26,7 +26,6 @@ github_username:  vgrgic
 
 # Build settings
 markdown: kramdown
-theme: jekyll-sleek
 plugins:
   - jekyll-feed
 
